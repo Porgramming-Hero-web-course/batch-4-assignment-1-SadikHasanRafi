@@ -1,8 +1,7 @@
 function validateKeys(object, key) {
+    var flag = false;
     for (var i = 0; i < key.length; i++) {
-        if ((key[i] in object)) {
-        }
-        else {
+        if (!(key[i] in object)) {
             return false;
         }
     }
