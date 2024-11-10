@@ -1,29 +1,20 @@
 {
-    var Circle_1 = /** @class */ (function () {
-        function Circle(shape, radius) {
-            this.radius = radius;
-            this.shape = shape;
+    var Circle = /** @class */ (function () {
+        function Circle() {
         }
         return Circle;
     }());
-    var Rectangle_1 = /** @class */ (function () {
-        function Rectangle(width, height, shape) {
-            this.width = width;
-            this.height = height;
-            this.shape = shape;
+    var Rectangle = /** @class */ (function () {
+        function Rectangle() {
         }
         return Rectangle;
     }());
     var calculateShapeArea = function (shape) {
-        console.log("🚀 ~ calculateShapeArea ~ shape:", shape);
         var res;
-        if (shape instanceof Circle_1) {
-            shape = new Circle_1(shape.shape, shape.radius);
-            console.log("🚀 ~ calculateShapeArea ~ shape:", shape);
+        if (shape.shape === "circle") {
             res = Math.PI * Math.pow(shape.radius, 2);
         }
-        if (shape instanceof Rectangle_1) {
-            console.log("🚀 ~ calculateShapeArea ~ shape:", shape);
+        if (shape.shape === "rectangle") {
             res = shape.width * shape.height;
         }
         return res;

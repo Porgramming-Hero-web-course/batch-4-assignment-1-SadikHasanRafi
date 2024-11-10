@@ -1,43 +1,32 @@
 {
 
 
-  class Circle {
-    shape: string;
+  class Circle  {
+    shape: "circle";
     radius: number;
   
-    constructor( shape: string,radius: number,) {
-      this.radius = radius; 
-      this.shape = shape;   
-    }
   }
   
-  class Rectangle {
-    shape: string;
+  class Rectangle  {
+    shape:  "rectangle";
     width: number;
     height: number;
   
-    constructor(width: number, height: number, shape: string) {
-      this.width = width;    
-      this.height = height;  
-      this.shape = shape;    
-    }
   }
 
 
 const calculateShapeArea = (shape: Circle | Rectangle): number => { 
-console.log("🚀 ~ calculateShapeArea ~ shape:", shape)
 
   let res
 
-  if (shape instanceof Circle) {
-    shape = new Circle(shape.shape, shape.radius)
+  if (  shape.shape === "circle") {
     res = Math.PI * Math.pow(shape.radius, 2);
   } 
-  if (shape instanceof Rectangle) {
-    console.log("🚀 ~ calculateShapeArea ~ shape:", shape)
+  if ( shape.shape === "rectangle") {
     res = shape.width * shape.height;
   }
   return res;
+
 }
 
 // Sample Input 1:
