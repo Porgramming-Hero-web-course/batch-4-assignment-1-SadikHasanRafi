@@ -1,17 +1,6 @@
-const removeDuplicates = (nums:number[]) => {
-    let newArray :number[] = []
-    for (let i = 0; i < nums.length; i++) {
-        const element = nums[i];
-        for (let j = 0; j < nums.length; j++) {
-            if (j==i) {
-                continue;
-            }else{
-                if (element === nums[j]) {
-                   newArray.push(element);
-                }
-            }
-        }
-    }
+const removeDuplicates = (nums:number[]):number[] => {
+    const duplicates = nums.filter((item, index) => nums.indexOf(item) == index);
+    return duplicates
 }
 
 
@@ -23,3 +12,4 @@ const removeDuplicates = (nums:number[]) => {
 
 
 console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]))
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5, 5, 4,4,4,4,4,3,2,2,2,2,1,1,11,1,1]))
